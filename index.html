@@ -1,27 +1,25 @@
 <!doctype html>
+
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <title>Language keyboard converter</title>
     <meta name="keywords" content="ไทย, อังกฤษ, พิมพ์ผิด, ลืม, เปลี่ยนภาษา, de=กำ">
-    <meta name="description" content="เว็บที่ช่วยเปลี่ยนภาษาอังกฤษเป็นไทยเวลาคุณลิมเปลี่ยนภาษาแล้วเผลอพิมพ์ไป จะได้ไม่ต้องพิมพ์ใหม่ให้เมื่อย">
+    <meta name="description"
+        content="เว็บที่ช่วยเปลี่ยนภาษาอังกฤษเป็นไทยเวลาคุณลิมเปลี่ยนภาษาแล้วเผลอพิมพ์ไป จะได้ไม่ต้องพิมพ์ใหม่ให้เมื่อย">
 
-    <link rel="stylesheet" href="mycss.min.css">
-    <script src="myjavascript.min.js"></script>
-    <script src="script.js"></script>
-    <script>
-        
-    </script>
+    <link rel="stylesheet" href="mycss.css">
+    <script type="module" src="main.mjs"></script>
     <link href="https://fonts.googleapis.com/css?family=Kanit&display=swap" rel="stylesheet">
 </head>
+
 <body>
-<div class = "outer">
-    <h2 class = "head">เปลี่ยนประโยคหรือข้อความที่พิมพ์ผิดจากภาษาอังกฤษให้เป็นภาษาไทยเวลาลืมกดเปลี่ยนภาษา</h2>
-    <input id="q" type = "text" name="form" value="cpj0y' rb,rNzbfwfhw'goujp" size=40 spellcheck = "false"><br><br>
-    <input id="ch" class = "w3-button w3-blue"type="submit" value = "เปลี่ยนเลย!" onclick = "disp()">
-    <input id="lan" type="submit" class = "chlan" value = "EN => TH" onclick = "change_lan();
-                                                                document.querySelector('#lan').value = get_lan();">
-    <p id="dummy", class="output">  </p>
-    
-</div>
+    <main>
+        <h2 class="head">เปลี่ยนประโยคหรือข้อความที่พิมพ์ผิดจากภาษาอังกฤษให้เป็นภาษาไทยเวลาลืมกดเปลี่ยนภาษา</h2>
+        <input id="q" type="text" name="form" value="cpj0y' rb,rNzbfwfhw'goujp" size=40 spellcheck="false"><br><br>
+        <input id="ch" class="w3-button w3-blue" type="submit" value="เปลี่ยนเลย!" onclick="disp()">
+        <input id="lan" class="chlan" type="button" value="EN => TH" onclick="change_lan.bind(this)()">
+        <p id="dummy" class="output"> </p>
+    </main>
 </body>
+
 </html>
